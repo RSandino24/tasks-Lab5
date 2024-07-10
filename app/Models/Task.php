@@ -13,10 +13,10 @@ class Task extends Model
         'title',
         'priority',
         'completed',
-        'user_id', // Agregar esto para permitir la asignación masiva de user_id
+        'user_id',
     ];
 
-    // Relación con el modelo User
+
     public function user()
     {
         return $this->belongsTo(User::class);

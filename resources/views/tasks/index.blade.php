@@ -22,7 +22,7 @@
                 <th>Nombre</th>
                 <th>Prioridad</th>
                 <th>Completada</th>
-                <th>Usuario</th> <!-- Nueva columna para mostrar el nombre del usuario -->
+                <th>Usuario</th>
                 <th>Configuraciones</th>
                 <th>Acciones</th>
             </tr>
@@ -48,7 +48,7 @@
                         <span class="badge bg-danger">Pendiente</span>
                     @endif
                 </td>
-                <td>{{ $task->user->name ?? 'No asignado' }}</td> <!-- Mostrar el nombre del usuario o 'No asignado' -->
+                <td>{{ $task->user->name ?? 'No asignado' }}</td>
                 <td>
                     <form action="{{ route('tasks.complete', $task->id) }}" method="POST" style="display: inline;">
                         @csrf
